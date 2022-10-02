@@ -7,25 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D63DAA728E87E4400ABC461 /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DAA628E87E4400ABC461 /* LandscapeViewController.swift */; };
-		3D63DAA928E8837800ABC461 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DAA828E8837800ABC461 /* Operation.swift */; };
-		3D63DAAB28E8844400ABC461 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DAAA28E8844400ABC461 /* MainViewController.swift */; };
+		3D63DAAB28E8844400ABC461 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DAAA28E8844400ABC461 /* NavigationViewController.swift */; };
 		3DC8A0E128E8701A00B2E706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E028E8701A00B2E706 /* AppDelegate.swift */; };
 		3DC8A0E328E8701A00B2E706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E228E8701A00B2E706 /* SceneDelegate.swift */; };
-		3DC8A0E528E8701A00B2E706 /* PortraitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E428E8701A00B2E706 /* PortraitViewController.swift */; };
+		3DC8A0E528E8701A00B2E706 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E428E8701A00B2E706 /* CalculatorViewController.swift */; };
 		3DC8A0E828E8701A00B2E706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E628E8701A00B2E706 /* Main.storyboard */; };
 		3DC8A0EA28E8701C00B2E706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E928E8701C00B2E706 /* Assets.xcassets */; };
 		3DC8A0ED28E8701C00B2E706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC8A0EB28E8701C00B2E706 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D63DAA628E87E4400ABC461 /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
-		3D63DAA828E8837800ABC461 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
-		3D63DAAA28E8844400ABC461 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3D63DAAA28E8844400ABC461 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3DC8A0DD28E8701A00B2E706 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC8A0E028E8701A00B2E706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC8A0E228E8701A00B2E706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3DC8A0E428E8701A00B2E706 /* PortraitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitViewController.swift; sourceTree = "<group>"; };
+		3DC8A0E428E8701A00B2E706 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		3DC8A0E728E8701A00B2E706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DC8A0E928E8701C00B2E706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DC8A0EC28E8701C00B2E706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,10 +61,8 @@
 				3DC8A0E028E8701A00B2E706 /* AppDelegate.swift */,
 				3DC8A0E228E8701A00B2E706 /* SceneDelegate.swift */,
 				3DC8A0E628E8701A00B2E706 /* Main.storyboard */,
-				3D63DAAA28E8844400ABC461 /* MainViewController.swift */,
-				3DC8A0E428E8701A00B2E706 /* PortraitViewController.swift */,
-				3D63DAA628E87E4400ABC461 /* LandscapeViewController.swift */,
-				3D63DAA828E8837800ABC461 /* Operation.swift */,
+				3D63DAAA28E8844400ABC461 /* NavigationViewController.swift */,
+				3DC8A0E428E8701A00B2E706 /* CalculatorViewController.swift */,
 				3DC8A0E928E8701C00B2E706 /* Assets.xcassets */,
 				3DC8A0EB28E8701C00B2E706 /* LaunchScreen.storyboard */,
 				3DC8A0EE28E8701C00B2E706 /* Info.plist */,
@@ -147,11 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D63DAA928E8837800ABC461 /* Operation.swift in Sources */,
-				3DC8A0E528E8701A00B2E706 /* PortraitViewController.swift in Sources */,
+				3DC8A0E528E8701A00B2E706 /* CalculatorViewController.swift in Sources */,
 				3DC8A0E128E8701A00B2E706 /* AppDelegate.swift in Sources */,
-				3D63DAAB28E8844400ABC461 /* MainViewController.swift in Sources */,
-				3D63DAA728E87E4400ABC461 /* LandscapeViewController.swift in Sources */,
+				3D63DAAB28E8844400ABC461 /* NavigationViewController.swift in Sources */,
 				3DC8A0E328E8701A00B2E706 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

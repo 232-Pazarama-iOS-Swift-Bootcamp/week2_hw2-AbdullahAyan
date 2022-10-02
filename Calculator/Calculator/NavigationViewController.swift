@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class NavigationViewController: UIViewController {
 
     static var testNumber = 12
     
@@ -18,12 +18,12 @@ class MainViewController: UIViewController {
     
     func determineMyDeviceOrientation(){
         if UIDevice.current.orientation.isLandscape {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "Landscape") as? LandscapeViewController {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Landscape") as? CalculatorViewController {
                 navigationController?.pushViewController(vc, animated: false)
             }
         }
         if UIDevice.current.orientation.isPortrait {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "Portrait") as? PortraitViewController {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Portrait") as? CalculatorViewController {
                 navigationController?.pushViewController(vc, animated: false)
             }
         }
@@ -31,7 +31,6 @@ class MainViewController: UIViewController {
    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         determineMyDeviceOrientation()
-        print(Operation.testNumber)
     }
 
 }
