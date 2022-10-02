@@ -20,6 +20,7 @@ class OperationModel {
 class OperationViewModel {
     var model = OperationModel()
     var operationElemets = [Double]()
+    var previousOutput = "0"
     var previousSymbol = ""
     var nextSembol = ""
     var onWriting = "" {
@@ -42,6 +43,8 @@ class OperationViewModel {
     func operatorClicked(symbol: String) -> String {
         if symbol != "=" {
             nextSembol = symbol
+        }else {
+            print(operationElemets)
         }
         operationElemets.append(Double(onWriting)!)
         onWriting = "0"
@@ -51,29 +54,29 @@ class OperationViewModel {
             case "+":
                 model.output = (operationElemets.removeLast() + operationElemets.removeLast())
                 operationElemets.append(model.output)
-
+                
                 previousSymbol = nextSembol
             case "×":
                 model.output = (operationElemets.removeLast() * operationElemets.removeLast())
                 operationElemets.append(model.output)
-
+                
                 previousSymbol = nextSembol
             case "-":
                 let second = operationElemets.removeLast()
                 let first = operationElemets.removeFirst()
                 model.output = first - second
                 operationElemets.append(model.output)
-
+                
                 previousSymbol = nextSembol
             case "÷":
                 let second = operationElemets.removeLast()
                 let first = operationElemets.removeFirst()
                 model.output = first / second
                 operationElemets.append(model.output)
-
+                
                 previousSymbol = nextSembol
             case "=":
-                print(11)
+                break
             default:
                 model.output = 0
             }
@@ -81,15 +84,9 @@ class OperationViewModel {
             previousSymbol = symbol
         }
         
-
-        
-        print(operationElemets)
-        
         if let int = Int(exactly: operationElemets[0] ) {
-    
             return String(int)
         }else {
-
             return String(operationElemets[0])
         }
     }
@@ -106,12 +103,44 @@ class OperationViewModel {
                 onWriting = "-" + onWriting
             }
         case "%":
-            onWriting = String(Double(onWriting)! / 100)
+            onWriting = String((Double(onWriting) ?? 0) / 100)
+        case "π":
+            onWriting = String(Double.pi)
+        case "log2":
+            onWriting = String(log2((Double(onWriting) ?? 0)))
+        case "√x":
+            onWriting = String(sqrt(Double(onWriting) ?? 0))
+        case "x²":
+            onWriting = String(pow((Double(onWriting) ?? 0),2))
+        case "x!":
+            let donWriting = Double(onWriting) ?? 0
+            var output = 1
+            
+            if (donWriting > 1) {
+                for j in 1...Int(donWriting){
+                    output *= j
+                }
+            }
+            onWriting = "0"
+            return String(output)
+            
         default:
             onWriting = "0"
         }
         
-        return onWriting
+        if let int = Int(exactly: Double(onWriting)! ) {
+            return String(int)
+        }else {
+            return String(Double(onWriting)!)
+        }
+    }
+    
+    func initalText() -> String {
+        return OperationModel.sharedText
+    }
+    
+    func previousCalculation() -> String{
+        return OperationModel.sharedText
     }
     
 }
@@ -127,6 +156,7 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         viewModel = OperationViewModel()
+        displayLabel.text = viewModel?.initalText()
     }
     
     @IBAction func numberButtonClicked(_ sender: UIButton) {
@@ -135,6 +165,7 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func operationButtonClicked(_ sender: UIButton) {
         displayLabel.text = viewModel?.operatorClicked(symbol: (sender.titleLabel?.text)!)
+        previousOperationLabel.text = viewModel?.previousOutput
     }
     
     

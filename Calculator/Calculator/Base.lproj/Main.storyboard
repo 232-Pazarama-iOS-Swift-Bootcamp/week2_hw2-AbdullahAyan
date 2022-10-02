@@ -531,13 +531,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UR-bk-7Kf">
                                                 <rect key="frame" x="195.66666666666666" y="45.333333333333343" width="34" height="54"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="sin" buttonSize="large">
+                                                <buttonConfiguration key="configuration" style="plain" title="√x" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
                                                         <color key="backgroundColor" name="eerieBlack"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="iHO-C2-7sG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-pl-CFk">
                                                 <rect key="frame" x="234.66666666666666" y="48.333333333333343" width="33.999999999999972" height="48"/>
@@ -658,13 +661,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCL-sL-4pQ">
                                                 <rect key="frame" x="195.66666666666666" y="45.666666666666657" width="34" height="54"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="cos" buttonSize="large">
+                                                <buttonConfiguration key="configuration" style="plain" title="π" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
                                                         <color key="backgroundColor" name="eerieBlack"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="pYO-GQ-Gm3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bar-a2-zkH">
                                                 <rect key="frame" x="234.66666666666666" y="45.666666666666657" width="33.999999999999972" height="54"/>
@@ -783,15 +789,18 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMu-Zg-q5S">
-                                                <rect key="frame" x="195.66666666666666" y="45.333333333333314" width="34" height="54"/>
+                                                <rect key="frame" x="195.66666666666666" y="49" width="34" height="47"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="tan" buttonSize="large">
+                                                <buttonConfiguration key="configuration" style="plain" title="log2" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
                                                         <color key="backgroundColor" name="eerieBlack"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="OnM-6T-z0r"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXP-uq-Om6">
                                                 <rect key="frame" x="234.66666666666666" y="45.333333333333314" width="33.999999999999972" height="54"/>
@@ -912,13 +921,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhP-48-7YN">
                                                 <rect key="frame" x="195.66666666666666" y="45.333333333333258" width="34" height="54"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="ln" buttonSize="large">
+                                                <buttonConfiguration key="configuration" style="plain" title="x²" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
                                                         <color key="backgroundColor" name="eerieBlack"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="Nmw-ax-dOg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-PU-0kM">
                                                 <rect key="frame" x="234.66666666666666" y="45.333333333333258" width="33.999999999999972" height="54"/>
@@ -1046,6 +1058,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="cOG-nu-pTj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JA-Kr-A6p">
                                                 <rect key="frame" x="234.66666666666666" y="45.333333333333258" width="33.999999999999972" height="54"/>
