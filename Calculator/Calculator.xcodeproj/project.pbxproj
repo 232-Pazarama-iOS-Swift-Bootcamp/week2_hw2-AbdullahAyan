@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D06A4D228EA2A6200A06AED /* OperationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06A4D128EA2A6200A06AED /* OperationModel.swift */; };
+		3D06A4D428EA2ADD00A06AED /* OperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06A4D328EA2ADD00A06AED /* OperationViewModel.swift */; };
 		3D63DAAB28E8844400ABC461 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DAAA28E8844400ABC461 /* NavigationViewController.swift */; };
 		3DC8A0E128E8701A00B2E706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E028E8701A00B2E706 /* AppDelegate.swift */; };
 		3DC8A0E328E8701A00B2E706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC8A0E228E8701A00B2E706 /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D06A4D128EA2A6200A06AED /* OperationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModel.swift; sourceTree = "<group>"; };
+		3D06A4D328EA2ADD00A06AED /* OperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewModel.swift; sourceTree = "<group>"; };
 		3D63DAAA28E8844400ABC461 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3DC8A0DD28E8701A00B2E706 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC8A0E028E8701A00B2E706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D06A4D528EA2B0700A06AED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D06A4D128EA2A6200A06AED /* OperationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D06A4D628EA2B0F00A06AED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D06A4D328EA2ADD00A06AED /* OperationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3D06A4D728EA2B1800A06AED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D63DAAA28E8844400ABC461 /* NavigationViewController.swift */,
+				3DC8A0E428E8701A00B2E706 /* CalculatorViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D06A4D828EA2B3700A06AED /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3DC8A0E028E8701A00B2E706 /* AppDelegate.swift */,
+				3DC8A0E228E8701A00B2E706 /* SceneDelegate.swift */,
+				3DC8A0E628E8701A00B2E706 /* Main.storyboard */,
+				3DC8A0E928E8701C00B2E706 /* Assets.xcassets */,
+				3DC8A0EB28E8701C00B2E706 /* LaunchScreen.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		3DC8A0D428E8701A00B2E706 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +99,10 @@
 		3DC8A0DF28E8701A00B2E706 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				3DC8A0E028E8701A00B2E706 /* AppDelegate.swift */,
-				3DC8A0E228E8701A00B2E706 /* SceneDelegate.swift */,
-				3DC8A0E628E8701A00B2E706 /* Main.storyboard */,
-				3D63DAAA28E8844400ABC461 /* NavigationViewController.swift */,
-				3DC8A0E428E8701A00B2E706 /* CalculatorViewController.swift */,
-				3DC8A0E928E8701C00B2E706 /* Assets.xcassets */,
-				3DC8A0EB28E8701C00B2E706 /* LaunchScreen.storyboard */,
+				3D06A4D828EA2B3700A06AED /* Base */,
+				3D06A4D528EA2B0700A06AED /* Model */,
+				3D06A4D628EA2B0F00A06AED /* ViewModel */,
+				3D06A4D728EA2B1800A06AED /* View */,
 				3DC8A0EE28E8701C00B2E706 /* Info.plist */,
 			);
 			path = Calculator;
@@ -143,6 +181,8 @@
 			files = (
 				3DC8A0E528E8701A00B2E706 /* CalculatorViewController.swift in Sources */,
 				3DC8A0E128E8701A00B2E706 /* AppDelegate.swift in Sources */,
+				3D06A4D428EA2ADD00A06AED /* OperationViewModel.swift in Sources */,
+				3D06A4D228EA2A6200A06AED /* OperationModel.swift in Sources */,
 				3D63DAAB28E8844400ABC461 /* NavigationViewController.swift in Sources */,
 				3DC8A0E328E8701A00B2E706 /* SceneDelegate.swift in Sources */,
 			);
