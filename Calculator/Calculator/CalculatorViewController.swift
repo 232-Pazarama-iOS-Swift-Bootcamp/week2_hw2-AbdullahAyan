@@ -10,6 +10,7 @@ import UIKit
 
 class OperationModel {
     static var sharedText = "0"
+    static var sharedPre = "0"
     var output: Double = 0 {
         didSet {
             OperationModel.sharedText = String(output)
@@ -21,6 +22,11 @@ class OperationViewModel {
     var model = OperationModel()
     var operationElemets = [Double]()
     var previousOutput = "0"
+    var prepreviousOutput = "0" {
+        didSet {
+            OperationModel.sharedPre = prepreviousOutput
+        }
+    }
     var previousSymbol = ""
     var nextSembol = ""
     var onWriting = "" {
@@ -46,7 +52,7 @@ class OperationViewModel {
         }else {
             print(operationElemets)
         }
-        operationElemets.append(Double(onWriting)!)
+        operationElemets.append(Double(onWriting) ?? 0)
         onWriting = "0"
         
         if operationElemets.count == 2 {
@@ -54,31 +60,32 @@ class OperationViewModel {
             case "+":
                 model.output = (operationElemets.removeLast() + operationElemets.removeLast())
                 operationElemets.append(model.output)
-                
+                setPres()
                 previousSymbol = nextSembol
             case "×":
                 model.output = (operationElemets.removeLast() * operationElemets.removeLast())
                 operationElemets.append(model.output)
-                
+                setPres()
                 previousSymbol = nextSembol
             case "-":
                 let second = operationElemets.removeLast()
                 let first = operationElemets.removeFirst()
                 model.output = first - second
                 operationElemets.append(model.output)
-                
+                setPres()
                 previousSymbol = nextSembol
             case "÷":
                 let second = operationElemets.removeLast()
                 let first = operationElemets.removeFirst()
                 model.output = first / second
                 operationElemets.append(model.output)
-                
+                setPres()
                 previousSymbol = nextSembol
             case "=":
                 break
             default:
                 model.output = 0
+                setPres()
             }
         }else {
             previousSymbol = symbol
@@ -89,6 +96,11 @@ class OperationViewModel {
         }else {
             return String(operationElemets[0])
         }
+    }
+    
+    func setPres() {
+        prepreviousOutput = previousOutput
+        previousOutput = String(model.output)
     }
     
     func changerClicked(symbol: String) -> String {
@@ -139,6 +151,10 @@ class OperationViewModel {
         return OperationModel.sharedText
     }
     
+    func initialPre() -> String {
+        return OperationModel.sharedPre
+    }
+    
     func previousCalculation() -> String{
         return OperationModel.sharedText
     }
@@ -156,6 +172,7 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         viewModel = OperationViewModel()
+        previousOperationLabel.text = viewModel?.initialPre()
         displayLabel.text = viewModel?.initalText()
     }
     
@@ -165,7 +182,7 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func operationButtonClicked(_ sender: UIButton) {
         displayLabel.text = viewModel?.operatorClicked(symbol: (sender.titleLabel?.text)!)
-        previousOperationLabel.text = viewModel?.previousOutput
+        previousOperationLabel.text = viewModel?.prepreviousOutput
     }
     
     
