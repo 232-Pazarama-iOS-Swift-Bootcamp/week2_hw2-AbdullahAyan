@@ -144,9 +144,12 @@ class OperationViewModel {
         }
         
         if let int = Int(exactly: Double(onWriting)! ) {
+            onWriting = "0"
             return String(int)
         }else {
-            return String(Double(onWriting)!)
+            var temp = Double(onWriting)!
+            onWriting = "0"
+            return String(temp)
         }
     }
 //
