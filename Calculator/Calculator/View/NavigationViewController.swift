@@ -7,9 +7,13 @@
 
 import UIKit
 
-class NavigationViewController: UIViewController {
 
-    static var testNumber = 12
+//
+//  Navigate controller orientation for user asks. User can use scientif calculator
+//  on Landscape position.
+//
+
+class NavigationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

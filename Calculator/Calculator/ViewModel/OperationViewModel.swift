@@ -1,22 +1,15 @@
 //
-//  ViewController.swift
+//  OperationViewModel.swift
 //  Calculator
 //
-//  Created by Abdullah Ayan on 1.10.2022.
+//  Created by Abdullah Ayan on 2.10.2022.
 //
 
-import UIKit
+import Foundation
 
-
-class OperationModel {
-    static var sharedText = "0"
-    static var sharedPre = "0"
-    var output: Double = 0 {
-        didSet {
-            OperationModel.sharedText = String(output)
-        }
-    }
-}
+//
+// ViewModel can reach model and update.
+//
 
 class OperationViewModel {
     var model = OperationModel()
@@ -34,7 +27,9 @@ class OperationViewModel {
             OperationModel.sharedText = onWriting
         }
     }
-    
+//
+//    This function takes input from user and sets necessary places.
+//
     func write(number : String) -> String {
         if onWriting == "0" {
             onWriting = number
@@ -46,11 +41,13 @@ class OperationViewModel {
         return onWriting
     }
     
+//
+//    When user press operator buttons, this function calculate the output.
+//
+    
     func operatorClicked(symbol: String) -> String {
         if symbol != "=" {
             nextSembol = symbol
-        }else {
-            print(operationElemets)
         }
         operationElemets.append(Double(onWriting) ?? 0)
         onWriting = "0"
@@ -90,13 +87,19 @@ class OperationViewModel {
         }else {
             previousSymbol = symbol
         }
-        
+//
+//      Tries to convert output to Integer for beauty purposes
+//
         if let int = Int(exactly: operationElemets[0] ) {
             return String(int)
         }else {
             return String(operationElemets[0])
         }
     }
+    
+//
+//  Adjust previousOutputLabel in ViewController
+//
     
     func setPres() {
         prepreviousOutput = previousOutput
@@ -146,7 +149,9 @@ class OperationViewModel {
             return String(Double(onWriting)!)
         }
     }
-    
+//
+//  This three functions important because when UIDevice.oriantation change controllers needs to update label text.
+//
     func initalText() -> String {
         return OperationModel.sharedText
     }
@@ -160,36 +165,3 @@ class OperationViewModel {
     }
     
 }
-
-class CalculatorViewController: UIViewController {
-    
-    @IBOutlet weak var displayLabel: UILabel!
-    @IBOutlet weak var previousOperationLabel: UILabel!
-    
-    var viewModel: OperationViewModel?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.hidesBackButton = true
-        viewModel = OperationViewModel()
-        previousOperationLabel.text = viewModel?.initialPre()
-        displayLabel.text = viewModel?.initalText()
-    }
-    
-    @IBAction func numberButtonClicked(_ sender: UIButton) {
-        displayLabel.text = viewModel?.write(number: (sender.titleLabel?.text)!)
-    }
-    
-    @IBAction func operationButtonClicked(_ sender: UIButton) {
-        displayLabel.text = viewModel?.operatorClicked(symbol: (sender.titleLabel?.text)!)
-        previousOperationLabel.text = viewModel?.prepreviousOutput
-    }
-    
-    
-    @IBAction func changerClicked(_ sender: UIButton) {
-        displayLabel.text = viewModel?.changerClicked(symbol: (sender.titleLabel?.text)!)
-    }
-    
-    
-}
-
