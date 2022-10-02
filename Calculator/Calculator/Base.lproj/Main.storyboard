@@ -59,7 +59,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="operationButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGE-pD-5gf"/>
+                                                    <action selector="changerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEA-no-qyT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sE-hH-iaF">
@@ -73,7 +73,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="operationButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kj9-aq-t9M"/>
+                                                    <action selector="changerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v6p-Uq-Sc3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-TN-WgU">
@@ -87,7 +87,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="operationButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gql-7K-6Tk"/>
+                                                    <action selector="changerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eco-dZ-n1Z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGU-QQ-c5g">
@@ -439,7 +439,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ila-pl-tfA"/>
                     <connections>
-                        <outlet property="clearButton" destination="axl-cP-Ifg" id="Cku-UQ-jUj"/>
                         <outlet property="displayLabel" destination="wfa-ul-v5T" id="4gL-v6-yrk"/>
                         <outlet property="previousOperationLabel" destination="leY-dQ-Nik" id="BfU-vJ-oOC"/>
                     </connections>
@@ -541,7 +540,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-pl-CFk">
-                                                <rect key="frame" x="234.66666666666669" y="48.333333333333343" width="33.999999999999972" height="48"/>
+                                                <rect key="frame" x="234.66666666666666" y="48.333333333333343" width="33.999999999999972" height="48"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="AC" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
@@ -551,7 +550,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="operationButtonClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="wz9-WD-g49"/>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="tCj-fa-VOG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFo-ON-DwP">
@@ -565,7 +564,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="operationButtonClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="7HD-f4-EKf"/>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="lwx-aA-SSC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE5-T1-APE">
@@ -579,7 +578,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="operationButtonClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="a8i-4S-Lhm"/>
+                                                    <action selector="changerClicked:" destination="iyM-FA-zRc" eventType="touchUpInside" id="zFI-7w-uPF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS0-GT-00r">
@@ -668,7 +667,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bar-a2-zkH">
-                                                <rect key="frame" x="234.66666666666669" y="45.666666666666657" width="33.999999999999972" height="54"/>
+                                                <rect key="frame" x="234.66666666666666" y="45.666666666666657" width="33.999999999999972" height="54"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="7" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
@@ -795,7 +794,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXP-uq-Om6">
-                                                <rect key="frame" x="234.66666666666669" y="45.333333333333314" width="33.999999999999972" height="54"/>
+                                                <rect key="frame" x="234.66666666666666" y="45.333333333333314" width="33.999999999999972" height="54"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="4" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
@@ -922,7 +921,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-PU-0kM">
-                                                <rect key="frame" x="234.66666666666669" y="45.333333333333258" width="33.999999999999972" height="54"/>
+                                                <rect key="frame" x="234.66666666666666" y="45.333333333333258" width="33.999999999999972" height="54"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
@@ -1049,7 +1048,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JA-Kr-A6p">
-                                                <rect key="frame" x="234.66666666666669" y="45.333333333333258" width="33.999999999999972" height="54"/>
+                                                <rect key="frame" x="234.66666666666666" y="45.333333333333258" width="33.999999999999972" height="54"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1" buttonSize="large">
                                                     <backgroundConfiguration key="background" cornerRadius="300">
@@ -1149,7 +1148,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="e5y-AV-d1X"/>
                     <connections>
-                        <outlet property="clearButton" destination="U5a-pl-CFk" id="r3k-7a-00c"/>
                         <outlet property="displayLabel" destination="POl-Kw-k1O" id="EBP-YM-ubo"/>
                         <outlet property="previousOperationLabel" destination="9Fv-zG-QgC" id="UOp-LL-f9P"/>
                     </connections>
